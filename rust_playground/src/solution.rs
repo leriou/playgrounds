@@ -50,8 +50,10 @@ impl Solution {
 pub struct Tests {}
 
 impl Tests {
-
     pub fn knapsack_test() {
-        println!("{:?}", Solution::knapsack(vec![1, 2, 3], vec![3, 2, 1], 3, 6));
+        println!(
+            "{:?}",
+            Solution::knapsack(vec![1, 2, 3], vec![3, 2, 1], 2, 4)
+        );
     }
 }

@@ -12,7 +12,7 @@ func Knapsack(wt, val []int, n, w int) int {
 	for i := 1; i <= n; i++ {
 		for j := 1; j <= w; j++ {
 			if j >= wt[i-1] {
-				dp[i][j] = max(dp[i-1][j], dp[i-1][j-wt[i-1]]+val[i-1])
+				dp[i][j] = Max(dp[i-1][j], dp[i-1][j-wt[i-1]]+val[i-1])
 			} else {
 				dp[i][j] = dp[i-1][j]
 			}
