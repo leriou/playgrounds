@@ -4,10 +4,8 @@ import (
 	"fmt"
 
 	sa "./src/algorithm"
-	ss "./src/solutions"
 )
 
 func main() {
-	ss.Max_test()
-	fmt.Println(sa.Max(8, 9))
+	fmt.Println(sa.Knapsack([]int{1, 2, 3}, []int{3, 2, 1}, 2, 4))
 }
