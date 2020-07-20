@@ -1,4 +1,5 @@
 mod solution;
+mod backtrack;
 
 extern crate redis;
 extern crate rand;
@@ -12,6 +13,7 @@ use tokio::prelude::*;
 use rand::prelude::*;
 use redis::Commands;
 use solution::Tests;
+use backtrack::BackTrack;
 
 
 fn fetch_an_integer() -> redis::RedisResult<isize> {
@@ -53,10 +55,15 @@ async fn es_test() -> Result<(), Box<dyn std::error::Error>> {
 }
 
 fn main() {
-
     test_rand();
     println!("{:?}", fetch_an_integer());
     es_test();
+    Tests::knapsack_test();
 
-    Tests::knapsack_test()
+    BackTrack::n_queen(9);
+
+    let a = vec![1,2];
+    for i in (0..9).rev() {
+        println!("{:?}", i);
+    }
 }
