@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	sa "./src/algorithm"
+	dp "./src/dp"
 )
 
 func main() {
-	fmt.Println(sa.Knapsack([]int{1, 2, 3}, []int{3, 2, 1}, 2, 4))
+	fmt.Println(dp.Knapsack([]int{1, 2, 3}, []int{3, 2, 1}, 2, 4))
 }
