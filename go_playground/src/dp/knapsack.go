@@ -8,7 +8,10 @@ func Max(a, b int) int {
 }
 
 func Knapsack(wt, val []int, n, w int) int {
-	dp := [100][100]int{}
+	dp := make([][]int, n+1)
+	for i := 0; i <= n; i++ {
+		dp[i] = make([]int, w+1)
+	}
 	for i := 1; i <= n; i++ {
 		for j := 1; j <= w; j++ {
 			if j >= wt[i-1] {
