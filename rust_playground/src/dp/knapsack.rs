@@ -1,4 +1,4 @@
-pub struct Knapsack {}
+pub struct Knapsack;
 
 impl Knapsack {
     pub fn knapsack(wt: Vec<usize>, val: Vec<usize>, n: usize, w: usize) -> usize {
@@ -13,5 +13,18 @@ impl Knapsack {
             }
         }
         dp[n][w]
+    }
+}
+
+//// tests
+///
+
+#[cfg(test)]
+mod test {
+    use super::Knapsack;
+
+    #[test]
+    fn test_knapsack() {
+        assert_eq!(Knapsack::knapsack(vec![1, 2, 3], vec![3, 2, 1], 2, 4), 5)
     }
 }

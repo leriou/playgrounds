@@ -1,4 +1,4 @@
-pub struct Rob {}
+pub struct Rob;
 
 impl Rob {
     pub fn rob(nums: Vec<i32>) -> i32 {
@@ -9,13 +9,22 @@ impl Rob {
         if l == 1 {
             return nums[0];
         }
-        let (mut i, mut a, mut b, mut tmp) = (2usize, nums[0], nums[0].max(nums[1]), 0i32);
+        let (mut i, mut a, mut b) = (2usize, nums[0], nums[0].max(nums[1]));
         while i < l {
-            tmp = b;
+            let tmp = b;
             b = b.max(a + nums[i]);
             a = tmp;
             i += 1;
         }
         return b;
+    }
+}
+
+#[cfg(test)]
+mod test {
+    use super::Rob;
+    #[test]
+    fn rob_test() {
+        assert_eq!(Rob::rob(vec![1, 2, 3]), 4)
     }
 }
