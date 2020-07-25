@@ -14,9 +14,10 @@ func init_matrix() {
 	}
 }
 
-func Nqueen() {
+func Nqueen() int {
 	init_matrix()
 	trail(1)
+	return count
 }
 
 func trail(i int) {
