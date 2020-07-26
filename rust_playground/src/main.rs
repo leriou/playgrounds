@@ -2,8 +2,8 @@ mod dp;
 mod linkedlist;
 
 fn main() {
-    let op = Some(Box::new(8));
-    op.map(|x| println!("{:?}", x));
+    let op = Option::from(1);
+    println!("{:?}", op.map(|x| x + 1));
 
     let mut a = "";
     let mut b = "iisis";
