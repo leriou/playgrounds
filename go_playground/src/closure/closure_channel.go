@@ -28,8 +28,7 @@ func Closure() {
 	}
 
 	for _, c := range chs {
-		time.Sleep(1000)
+		time.Sleep(10)
 		<-c
-		// fmt.Println(<-c)
 	}
 }
