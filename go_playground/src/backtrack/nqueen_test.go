@@ -7,7 +7,6 @@ import (
 )
 
 func TestNqueen(t *testing.T) {
-
 	c := bt.Nqueen()
 	if c != 92 {
 		t.Error("c -> ", c)
