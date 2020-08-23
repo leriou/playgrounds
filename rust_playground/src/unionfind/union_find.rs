@@ -1,24 +1,23 @@
-pub struct UnionFind{
+pub struct UnionFind {
     parents: Vec<usize>,
     size: Vec<usize>,
-    count: usize
+    count: usize,
 }
 
 impl UnionFind {
-
     pub fn with_capacity(n: usize) -> Self {
-        let mut v = vec![0;n];
+        let mut v = vec![0; n];
         for i in 0..n {
             v[i] = i;
         }
         UnionFind {
             parents: v,
-            size: vec![1;n],
-            count: n
+            size: vec![1; n],
+            count: n,
         }
     }
 
-    pub fn find(&mut self, mut p:usize) -> usize {
+    pub fn find(&mut self, mut p: usize) -> usize {
         while self.parents[p] != p {
             self.parents[p] = self.parents[self.parents[p]];
             p = self.parents[p];
@@ -46,22 +45,25 @@ impl UnionFind {
     }
 
     pub fn count(&self) -> usize {
-      self.count
+        self.count
     }
 }
 
 #[cfg(test)]
 mod test {
     use super::UnionFind;
+    use std::collections::HashMap;
+    use std::ops::Add;
+
     #[test]
-    fn test_knapsack() {
+    fn test_union_find() {
         let mut uf = UnionFind::with_capacity(10);
-        uf.union(1,3);
-        uf.union(3,9);
-        uf.union(6,7);
-        uf.union(6,5);
-        uf.union(7,1);
-        assert_eq!(uf.connected(5,9), true);
+        uf.union(1, 3);
+        uf.union(3, 9);
+        uf.union(6, 7);
+        uf.union(6, 5);
+        uf.union(7, 1);
+        assert_eq!(uf.connected(5, 9), true);
         assert_eq!(uf.count(), 5);
     }
 }
