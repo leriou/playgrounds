@@ -16,9 +16,6 @@ impl Knapsack {
     }
 }
 
-//// tests
-///
-
 #[cfg(test)]
 mod test {
     use super::Knapsack;
