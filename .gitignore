@@ -2,3 +2,9 @@
 rust_playground/target/*
 
 py_playground/__pycache__/*
+
+
+*/.ipynb_checkpoints/*
+
+
+*/.idea/*
