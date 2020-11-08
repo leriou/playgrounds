@@ -76,7 +76,7 @@ async fn es_test() -> Result<(), Box<dyn std::error::Error>> {
 fn main() {
     let a = 0.1;
     let b = 0.2;
-    mongo_test();
-    es_test();
+    // mongo_test();
+    // es_test();
     println!("{:?}", a + b)
 }
