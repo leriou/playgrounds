@@ -2,7 +2,6 @@ package backtrack_test
 
 import (
 	"testing"
-
 	bt "../backtrack"
 )
 

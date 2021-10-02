@@ -37,23 +37,5 @@ func getPermutation(n int, k int) string {
 }
 
 func main() {
-	// c, _ := redis.Dial("tcp", "127.0.0.1:6379")
-	// defer c.Close()
-	// a := "123"
-
-	// cal.Cal()
-	// closure.Closure()
-
-	// n, _ := c.Do("SADD", a, "10086")
-
-	v := dp.Knapsack([]int{1, 2, 3}, []int{3, 2, 1}, 2, 3)
-
-	fmt.Println(v)
-
-	// fmt.Println(getPermutation(4, 9))
-
-	arr := []int{1, 3, 4, 5, 6, 7}
-	for i := range arr {
-		fmt.Println(i)
-	}
+	fmt.Println(getPermutation(4, 9))
 }

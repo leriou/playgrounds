@@ -17,9 +17,7 @@ impl Stock {
 
 #[cfg(test)]
 mod test {
-
     use super::Stock;
-
     #[test]
     fn stockproblem_test() {
         assert_eq!(Stock::max_profit(vec![1, 2, 3]), 2)
