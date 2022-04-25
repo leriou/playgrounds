@@ -1,7 +1,7 @@
 import random
 import time
 
-nums = 1000000
+nums = 10000000
 
 a1 = []
 a2 = []
