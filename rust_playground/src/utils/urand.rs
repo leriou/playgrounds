@@ -1,6 +1,6 @@
 use rand::prelude::*;
 
-pub fn get_rand() -> f64 {
+pub fn get_rand_f64() -> f64 {
     let mut rng = rand::thread_rng();
     rng.gen::<f64>()
 }

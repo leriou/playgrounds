@@ -79,7 +79,7 @@ for step in range(10000):
     D_loss.backward(retain_graph=True)      # reusing computational graph
     opt_D.step()
 
-    if step % 5 == 0:  # plotting
+    if step % 50 == 0:  # plotting
         plt.cla()
         plt.plot(PAINT_POINTS[0], G_paintings.data.numpy()[
                  0], c='#4AD631', lw=3, label='Generated painting',)
