@@ -8,6 +8,6 @@ mod sicp;
 
 fn main() {
     println!("gcd(30,42) -> {:?}", sicp::gcd::gcd(30,42));
-    let ret = sicp::prime::prime_question(10000);
+    let ret = sicp::prime::prime_question(200);
     println!("prime -> {:?}  all -> {:?}", ret.len(), ret);
 }
